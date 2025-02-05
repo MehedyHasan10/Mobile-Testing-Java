@@ -24,8 +24,6 @@ public class FormTest extends BaseTest{
     private final By dropDownText = By.xpath("//android.widget.TextView[@text=\"webdriver.io is awesome\"]");
     private String inputFieldText = "test input";
     private String switchBtnText = "Click to turn the switch OFF";
-
-    private final String scrollScript = "arguments[0].scrollIntoView(true);";
     
     @Test
     public void formTest(){
@@ -46,15 +44,7 @@ public class FormTest extends BaseTest{
         driver.findElement(iFrame).click();
         driver.findElement(dropDownText).click();
 
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript(scrollScript, driver.findElement(activeButton));
-
         driver.findElement(activeButton).click();
-
-    
-      
-
     }
-
-
+    
 }
