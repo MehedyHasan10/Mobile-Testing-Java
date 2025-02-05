@@ -29,7 +29,7 @@ public abstract class BaseTest {
         wait = new AppiumFluentWait<>(driver).withPollDelay(Duration.ofSeconds(MAX_WAIT));
     }
 
-    @AfterMethod
+    @AfterMethod//
     public void teardown() {
             driver.quit();
         }
